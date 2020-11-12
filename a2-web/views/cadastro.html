@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- bootstrap -->
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <link rel="stylesheet" href="../css/style-cadastro.css">
+  <script src="../js/main.js"></script>
+  <title>Cadastro</title>
+</head>
+<body>
+  <div id="container">
+    <div id="header" class="row no-gutters">
+      <div class="mudar-css" onclick="trocarCSSCadastro()">
+        TROCAR</br>CSS
+      </div>
+      <h2>Cadastro de cliente</h2>
+      <a href="../index.html" target="_self" rel="noopener noreferrer">
+        Voltar
+      </a>
+    </div>
+    <div id="main">
+      <form method="post" id="cadastro" class="cadastro">
+        <section id="basic-infos">
+          <div class="row content">
+            <label class="col-12 col-md-3" for="nome">Nome:</label>
+            <input class="col-12 col-md-9" type="text" name="nome" onkeyup="maiuscula(this)" id="nome">
+          </div>
+          <div class="row content">
+            <label class="col-12 col-md-3" for="sobrenome">Sobrenome:</label>
+            <input class="col-12 col-md-9" type="text" name="sobrenome" onkeyup="maiuscula(this)" id="sobrenome">
+          </div>
+          <div class="row content">
+            <label class="col-12 col-md-3" for="cpf">CPF:</label>
+            <input class="col-12 col-md-9" type="text" name="cpf" id="cpf" maxlength="11">
+          </div>
+          <div class="row content">
+            <label class="col-12 col-md-3" for="nascimento">Nascimento:</label>
+            <input class="col-9 col-md-4" type="date" name="nascimento" id="nascimento">
+          </div>
+          <div class="row content">
+            <label class="col-12 col-md-3" for="sex-choice">Sexo:</label>
+            <div id="sex-choice" class="row no-gutters">
+              <input class="mr-2" type="radio" name="sex" id="fem" value="F">
+              <label class="mr-4" for="fem">Feminino</label>
+              <input class="mr-2" type="radio" name="sex" id="masc" value="M">
+              <label for="masc">Masculino</label>
+            </div>
+          </div>
+        </section>
+        <section id="contact">
+          <div class="row content">
+            <label class="col-12 col-md-3" for="email">E-mail:</label>
+            <input class="col-12 col-md-9" type="email" name="email" id="email">
+          </div>
+          <div class="row content">
+            <label class="col-12 col-md-3" for="telefone">Telefone:</label>
+            <input class="col-9 col-md-4" type="tel" name="telefone" id="telefone" maxlength="11">
+          </div>
+        </section>
+        <section id="adress">
+          <div class="row content">
+            <label class="col-12 col-md-3" for="cidade">Cidade:</label>
+            <select id="cidade" name="cidade" class="col-12 col-md-9">
+              <option selected hidden></option>
+              <option>Andra dos Reis</option>
+              <option>Belford Roxo</option>
+              <option>Cabo Frio</option>
+              <option>Duque de Caxias</option>
+              <option>Japeri</option>
+              <option>Mangaratiba</option>
+              <option>Maricá</option>
+              <option>Nilópolis</option>
+              <option>Niterói</option>
+              <option>Nova Iguaçú</option>
+              <option>Parati</option>
+              <option>Petrópolis</option>
+              <option>Queimados</option>
+              <option>Resende</option>
+              <option>Rio de Janeiro</option>
+              <option>São Gonçalo</option>
+              <option>Seropédica</option>
+              <option>Volta Redonda</option>
+            </select>
+          </div>
+          <div class="row content">
+            <label class="col-12 col-md-3" for="bairro">Bairro:</label>
+            <input class="col-12 col-md-9" type="text" name="bairro" id="bairro">
+          </div>
+          <div class="row content">
+            <label class="col-12 col-md-3" for="logradouro">Logradouro:</label>
+            <div id="logradouro" class="row col-md-9">
+              <select id="tipolog" name="tipolog" class="col-12 col-md-6 mr-md-2 mb-2">
+                <option selected hidden>Tipo</option>
+                <option>Alameda</option>
+                <option>Avenida</option>
+                <option>Estrada</option>
+                <option>Ladeira</option>
+                <option>Rua</option>
+                <option>Ruela</option>
+                <option>Rodovia</option>
+                <option>Via</option>
+              </select>
+              <input class="col-12 col-md-* mb-2" type="text" name="log" id="log" placeholder="Logradouro">
+              <input class="col-4 col-md mr-2" type="text" name="numero" id="numero" placeholder="nº">
+              <input class="col col-md " type="text" name="complemento" id="complemento" placeholder="Complemento">
+            </div>
+          </div>
+          <div class="row content">
+            <label class="col-12 col-md-3" for="cep">Cep:</label>
+            <input class="col-12 col-md-4" type="number" name="cep" id="cep" placeholder="8 números sem separador">
+          </div>
+        </section>
+        <div id="news" class="row content">
+          <input class="offset-md-3 mr-2" type="checkbox" name="news" id="news">
+          <label for="news">Newsletters</label>
+        </div>
+        <button onclick="validarCadastro()" type="button" form="cadastro" value="salvar" class="salvar">Salvar</button>
+      </form>
+    </div>
+  </div>
+</body>
+</html>

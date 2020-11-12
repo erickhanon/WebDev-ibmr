@@ -1,0 +1,60 @@
+#container {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 16px;
+  margin: 32px auto;
+  max-width: 720px;
+  padding: 0 20px;
+}
+#header {
+  margin: 0 0 16px;
+}
+#header a {
+  color: #909090;
+}
+#header a:hover {
+  color: black;
+  text-decoration: none;
+}
+#main h2 {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 24px;
+  font-weight: bold;
+  margin: 0 0 8px;
+}
+#main p {
+  color: #343a40;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 16px;
+  line-height: 1.4;
+  margin: 0 0 32px;
+}
+.content {
+  margin: 0 0 40px;
+}
+.content label {
+  align-self: center;
+  padding: 0;
+  margin: 0;
+}
+.content input {
+  border: 1px solid #909090;
+  border-radius: 4px;
+  height: 34px;
+  outline: none;
+  width: 100%;
+}
+.content input:focus {
+  border: 1px solid black;
+  box-shadow: 0 6px 12px 0 rgba(0, 0, 0, 0.1);
+}
+.recuperar-senha {
+  background-color: #ffd700;
+  border: none;
+  border-radius: 4px;
+  color: #343a40;
+  cursor: pointer;
+  padding: 8px 24px;
+}
+.recuperar-senha:hover {
+  background-color: #ffe51d;
+}

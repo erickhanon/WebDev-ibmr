@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- bootstrap -->
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="../css/style-recuperacao.css">
+  <script src="../js/main.js"></script>
+  <title>Recuperar senha</title>
+</head>
+<body>
+  <div id="container">
+    <div id="header">
+      <a href="../index.html" target="_self" rel="noopener noreferrer">
+        Voltar
+      </a>
+    </div>
+    <div id="main">
+      <h2>Recuperação de senha</h2>
+      <p>Digite seu endereço de e-mail cadastrado e enviaremos instruções para redefinir sua senha.</p>
+      <div class="row content">
+          <label class="col-12 col-md-1 mb-2 mb-md-0 mr-md-3" for="email">E-mail:</label>
+          <input class="col-12 col-md-7" type="email" name="email" id="email">
+      </div>
+      <button class="recuperar-senha" onclick="recuperarSenha()">
+        Enviar
+      </button>
+    </div>
+  </div>
+</body>
+</html>
